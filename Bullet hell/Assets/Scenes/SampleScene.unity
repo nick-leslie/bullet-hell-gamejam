@@ -363,12 +363,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 91871303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a5e81f00c82f0645a60d9f872b1718e, type: 3}
+  m_Script: {fileID: 11500000, guid: f31ba75efa1026647b00611e30ce38c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.7
   projectile: {fileID: 4684594933167974040, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
   shotPos: {fileID: 237039354}
+  amount: 3
+  spred: 0
+  delayBetweenBurst: 0
 --- !u!212 &91871306
 SpriteRenderer:
   m_ObjectHideFlags: 0

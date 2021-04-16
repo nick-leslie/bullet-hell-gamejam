@@ -24,6 +24,10 @@ public class playerShootingManiger : MonoBehaviour
     {
         ChangeGunRotation();
         playerDirection();
+        if(shootingHeld)
+        {
+            currentGun.GetComponent<gun>().shoot();
+        }
     }
     public void shoot(InputAction.CallbackContext context)
     {
@@ -47,7 +51,6 @@ public class playerShootingManiger : MonoBehaviour
         Quaternion finalRot = new Quaternion(0, 0, rotation.z, rotation.w);
         currentGun.transform.rotation = finalRot;
 
-        Debug.Log(currentGun.transform.GetChild(0).name);
 
         if(!facingRight)
         {
