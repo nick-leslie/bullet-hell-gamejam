@@ -32,6 +32,7 @@ public class movement : MonoBehaviour
 
         if (dashing)
         {
+            rb.velocity = Vector2.zero;
             transform.position = Vector2.Lerp(transform.position, targetPos, dashTime);
             Debug.DrawLine(transform.position, targetPos);
             if (Vector2.Distance(transform.position,targetPos) <= closeEnough)

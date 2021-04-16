@@ -73,6 +73,12 @@ public class CameraControler : MonoBehaviour
         targetFOV = defaltFOV;
         FOVLerpTime = defaltFOVLerpTime;
     }
+    public void MoveCamera(Transform target)
+    {
+        smooth = true;
+        tracked = target;
+        StartCoroutine(stayAtLocation());
+    }
     public void MoveCamera(Transform target, float heldTime)
     {
         smooth = true;
@@ -96,6 +102,14 @@ public class CameraControler : MonoBehaviour
             ChangeFOV(targetFOV + FOV, FovLerpTime);
         }
         StartCoroutine(ResetCammraAfterLook(heldTime));
+    }
+    IEnumerator stayAtLocation()
+    {
+        while (Vector2.Distance(transform.position, tracked.position) > closeDistence)
+        {
+            yield return null;
+        }
+        smooth = false;
     }
     IEnumerator ResetCammraAfterLook(float heldTime)
     {
