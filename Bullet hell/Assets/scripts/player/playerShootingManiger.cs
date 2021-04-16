@@ -44,7 +44,19 @@ public class playerShootingManiger : MonoBehaviour
         cursor.position = pos;
         Quaternion rotation = Quaternion.LookRotation
             (cursor.transform.position - currentGun.transform.position, transform.TransformDirection(Vector3.up));
-        currentGun.transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+        Quaternion finalRot = new Quaternion(0, 0, rotation.z, rotation.w);
+        currentGun.transform.rotation = finalRot;
+
+        Debug.Log(currentGun.transform.GetChild(0).name);
+
+        if(!facingRight)
+        {
+            currentGun.transform.GetChild(0).localRotation = new Quaternion(0, 180, 0,0);
+        } else
+        {
+            currentGun.transform.GetChild(0).localRotation = new Quaternion(0, 0, 0,0);
+        }
+
     }
     void playerDirection()
     {
