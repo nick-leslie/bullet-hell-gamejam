@@ -87,4 +87,8 @@ public class movement : MonoBehaviour
             }
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        dashing = false;
+    }
 }
