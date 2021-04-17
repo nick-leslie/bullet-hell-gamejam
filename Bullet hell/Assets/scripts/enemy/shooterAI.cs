@@ -137,7 +137,6 @@ public class shooterAI : MonoBehaviour
     {
         // using mousePosition and player's transform (on orthographic camera view)
         var delta = brain.target.transform.position - transform.position;
-        Debug.Log(delta);
         if (delta.x >= 0 && !facingRight)
         {
             if (GunTrackTargert)
