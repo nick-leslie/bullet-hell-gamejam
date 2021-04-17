@@ -11,7 +11,7 @@ public class gun : MonoBehaviour
     [SerializeField]
     private GameObject projectile;
     [SerializeField]
-    private Transform shotPos;
+    private Transform[] shotPos;
     [Header("shot amount must be odd or else it adds an extra shot")]
     [SerializeField]
     private int amount;
@@ -45,19 +45,21 @@ public class gun : MonoBehaviour
                 //TODO make it so it can handle multiple shots
                 int startIndex = Mathf.Max(amount / 2);
                 bursting = true;
-                for (int i = -startIndex; i <= startIndex; i++)
+                for (int j = 0; j < shotPos.Length; j++)
                 {
-                    if (spred > 0)
+                    for (int i = -startIndex; i <= startIndex; i++)
                     {
-                        Instantiate(projectile, shotPos.transform.position, shotPos.transform.rotation * Quaternion.Euler(0, 0, spred * i));
-                        ;
-                    }
-                    else
-                    {
-                        Instantiate(projectile, shotPos.transform.position, shotPos.transform.rotation);
-                    }
+                        if (spred > 0)
+                        {
+                            Instantiate(projectile, shotPos[j].transform.position, shotPos[j].transform.rotation * Quaternion.Euler(0, 0, spred * i));
+                        }
+                        else
+                        {
+                            Instantiate(projectile, shotPos[j].transform.position, shotPos[j].transform.rotation);
+                        }
 
-                    yield return new WaitForSecondsRealtime(delayBetweenBurst);
+                        yield return new WaitForSecondsRealtime(delayBetweenBurst);
+                    }
                 }
                 StartCoroutine("coolDown");
             }

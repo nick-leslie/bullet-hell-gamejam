@@ -64,7 +64,7 @@ public class healthManiger : MonoBehaviour
         //TODO add code to wait for death animation
         if (gameObject.CompareTag("Player"))
         {
-            gameObject.transform.position = respawnPoint.position;
+            //gameObject.transform.position = respawnPoint.position;
             health = MaxHealth;
         } else
         {
