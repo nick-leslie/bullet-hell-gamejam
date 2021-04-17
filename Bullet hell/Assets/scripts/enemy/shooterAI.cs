@@ -38,8 +38,7 @@ public class shooterAI : MonoBehaviour
     {
         if (brain.atTarget==true)
         {
-            
-            StartPathfinding();
+            shoot();
         }
         gunTrackPlayer();
         checkForCloseColiders();
@@ -111,20 +110,22 @@ public class shooterAI : MonoBehaviour
     private void shoot()
     {
         gameObject.GetComponent<gun>().shoot();
+        StartPathfinding();
     }
     private void gunTrackPlayer()
     {
-        Quaternion rotation = Quaternion.LookRotation
-            (shotPoint.transform.position - transform.transform.position, transform.TransformDirection(Vector3.up));
-        Quaternion finalRot = new Quaternion(0, 0, rotation.z, rotation.w);
-        shotPoint.transform.rotation = finalRot;
-        if (!facingRight)
+        Vector3 dir = player.transform.position - shotPoint.transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        shotPoint.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+       if (dir.x >= 0 && !facingRight)
         {
-            shotPoint.transform.localRotation = new Quaternion(0, 180, 0, 0);
+            
+            shotPoint.transform.localScale = new Vector3(shotPoint.transform.localScale.x * -1, shotPoint.transform.localScale.y, shotPoint.transform.localScale.z); // activate looking left
         }
-        else
+        else if(dir.x < 0 && facingRight)
         {
-            shotPoint.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            shotPoint.transform.localScale = new Vector3(Mathf.Abs(shotPoint.transform.localScale.x), shotPoint.transform.localScale.y, shotPoint.transform.localScale.z); // or activate look right some other way
         }
     }
     void enemyDirection()

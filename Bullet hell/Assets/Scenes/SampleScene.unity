@@ -16334,6 +16334,7 @@ GameObject:
   - component: {fileID: 1096882056}
   - component: {fileID: 1096882059}
   - component: {fileID: 1096882058}
+  - component: {fileID: 1096882061}
   - component: {fileID: 1096882060}
   m_Layer: 0
   m_Name: icon
@@ -16463,6 +16464,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1096882061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096882055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31ba75efa1026647b00611e30ce38c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
+  projectile: {fileID: 4684594933167974040, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+  shotPos: {fileID: 936393407}
+  amount: 1
+  spred: 0
+  delayBetweenBurst: 0
 --- !u!1 &1349289605
 GameObject:
   m_ObjectHideFlags: 0
