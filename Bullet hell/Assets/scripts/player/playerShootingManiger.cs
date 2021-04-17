@@ -67,12 +67,12 @@ public class playerShootingManiger : MonoBehaviour
         var delta = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         if (delta.x >= 0 && !facingRight)
         { // mouse is on right side of player
-            transform.localScale = new Vector3(1, 1, 1); // or activate look right some other way
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // or activate look right some other way
             facingRight = true;
         }
         else if (delta.x < 0 && facingRight)
         { // mouse is on left side
-            transform.localScale = new Vector3(-1, 1, 1); // activate looking left
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z); // activate looking left
             facingRight = false;
         }
     }
