@@ -6,15 +6,11 @@ public class AIbrain : MonoBehaviour
 {
     [SerializeField]
     private float Speed;
-    [SerializeField]
-    private GameObject target;
-
+    public GameObject target;
     private Vector3 targetPos;
-    private Rigidbody2D rb;
     public bool atTarget;
     private void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void Update()

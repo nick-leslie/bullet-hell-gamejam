@@ -20,6 +20,8 @@ public class shooterAI : MonoBehaviour
     [SerializeField]
     private GameObject shotPoint;
     private bool facingRight;
+    [SerializeField]
+    private bool GunTrackTargert;
 
 
     // TODO MAKE I SO THAT IT LOOKS AT TARGET NOT JUST PLAYER
@@ -40,7 +42,7 @@ public class shooterAI : MonoBehaviour
         {
             shoot();
         }
-        gunTrackPlayer();
+        trackTarget();
         checkForCloseColiders();
         enemyDirection();
     }
@@ -112,35 +114,55 @@ public class shooterAI : MonoBehaviour
         gameObject.GetComponent<gun>().shoot();
         StartPathfinding();
     }
-    private void gunTrackPlayer()
+    private void trackTarget()
     {
-        Vector3 dir = player.transform.position - shotPoint.transform.position;
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (GunTrackTargert)
+        {
+            Vector3 dir = brain.target.transform.position - shotPoint.transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        shotPoint.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-       if (dir.x >= 0 && !facingRight)
-        {
-            
-            shotPoint.transform.localScale = new Vector3(shotPoint.transform.localScale.x * -1, shotPoint.transform.localScale.y, shotPoint.transform.localScale.z); // activate looking left
-        }
-        else if(dir.x < 0 && facingRight)
-        {
-            shotPoint.transform.localScale = new Vector3(Mathf.Abs(shotPoint.transform.localScale.x), shotPoint.transform.localScale.y, shotPoint.transform.localScale.z); // or activate look right some other way
-        }
+            shotPoint.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            if (dir.x >= 0 && !facingRight)
+            {
+
+                shotPoint.transform.localScale = new Vector3(shotPoint.transform.localScale.x * -1, shotPoint.transform.localScale.y, shotPoint.transform.localScale.z); // activate looking left
+            }
+            else if (dir.x < 0 && facingRight)
+            {
+                shotPoint.transform.localScale = new Vector3(Mathf.Abs(shotPoint.transform.localScale.x), shotPoint.transform.localScale.y, shotPoint.transform.localScale.z); // or activate look right some other way
+            }
+        } 
     }
     void enemyDirection()
     {
         // using mousePosition and player's transform (on orthographic camera view)
-        var delta = player.transform.position - transform.position;
+        var delta = brain.target.transform.position - transform.position;
+        Debug.Log(delta);
         if (delta.x >= 0 && !facingRight)
-        { // mouse is on right side of player
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // or activate look right some other way
-            facingRight = true;
+        {
+            if (GunTrackTargert)
+            {
+                // mouse is on right side of player
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // or activate look right some other way
+                facingRight = true;
+            } else
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                facingRight = true;
+            }
         }
         else if (delta.x < 0 && facingRight)
-        { // mouse is on left side
-            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z); // activate looking left
-            facingRight = false;
+        {
+            if (GunTrackTargert)
+            {
+                // mouse is on left side
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z); // activate looking left
+                facingRight = false;
+            } else
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                facingRight = false;
+            }
         }
     }
     private void OnDrawGizmos()
