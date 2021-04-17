@@ -18,7 +18,6 @@ public class roomSwap : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("grandma");
         if (collision.CompareTag("Player"))
         {
             Camera.main.GetComponent<CameraControler>().MoveCamera(gameObject.transform);
