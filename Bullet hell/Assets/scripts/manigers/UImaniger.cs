@@ -22,7 +22,6 @@ public class UImaniger : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         hearts = new GameObject[player.GetComponent<healthManiger>().getMaxHeath];
         HealthCanvus = GameObject.FindGameObjectWithTag("PlayerUI");
-        //this should work but if not shit
         for (int i = 0; i < hearts.Length; i++)
         {
             hearts[i] = Instantiate(HealthPrefb, (startPos.position + (offset * (i))) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
