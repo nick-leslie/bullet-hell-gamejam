@@ -32,6 +32,7 @@ public class shooterAI : MonoBehaviour
     void Start()
     {
         brain = gameObject.GetComponent<AIbrain>();
+        Home = brain.home;
         StartPathfinding();
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -40,11 +41,17 @@ public class shooterAI : MonoBehaviour
     {
         if (brain.atTarget==true)
         {
-            shoot();
+            if (brain.target != null)
+            {
+                shoot();
+            }
         }
-        trackTarget();
-        checkForCloseColiders();
-        enemyDirection();
+        if (brain.target != null)
+        {
+            trackTarget();
+            checkForCloseColiders();
+            enemyDirection();
+        }
     }
     private void StartPathfinding()
     {
