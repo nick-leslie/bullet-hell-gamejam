@@ -33,11 +33,11 @@ public class PauseManiger : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
-        //PausedUI.SetActive(false);
+       PausedUI.SetActive(false);
     }
     public void Pause()
     {
-        //PausedUI.SetActive(true);
+        PausedUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }

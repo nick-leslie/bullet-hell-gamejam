@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Invantory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("resorces")]
+    [SerializeField]
+    public string[] recorseType;
 
-    // Update is called once per frame
-    void Update()
+    public Dictionary<string, int> Recorces = new Dictionary<string, int>();
+    [Header("gun types")]
+    public bool pistol;
+    public bool shotgun;
+    public bool maschineGun;
+    private void Start()
     {
-        
+        for(int i=0;i<recorseType.Length;i++)
+        {
+            Recorces[recorseType[i]] = 0;
+        }
+    }
+    public void addToRecorseCount(string recorse,int amount)
+    {
+        for (int i = 0; i < recorseType.Length; i++)
+        {
+            if (recorse == recorseType[i])
+            {
+                Recorces[recorse] += amount;
+                break;
+            }
+        }
     }
 }
