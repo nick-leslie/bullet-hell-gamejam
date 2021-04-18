@@ -10,8 +10,10 @@ public class AIbrain : MonoBehaviour
     public GameObject target;
     private Vector3 targetPos;
     public bool atTarget;
+    public GameObject home;
     private void Start()
     {
+        
     }
     private void Update()
     {
@@ -40,5 +42,22 @@ public class AIbrain : MonoBehaviour
     public void TargetTransform(Transform newTarget)
     {
         targetPos = newTarget.position;
+    }
+    public void FindTarget()
+    {
+        Room HomeInfo = home.GetComponent<Room>();
+        GameObject potentalPlayer = HomeInfo.ThingsInRoom.Find((GameObject obj) => obj.tag == "Player");
+        if (potentalPlayer != null)
+        {
+            target = potentalPlayer;
+        } else
+        {
+            List<GameObject> turrets = HomeInfo.ThingsInRoom.FindAll((GameObject obj) => obj.tag == "turret");
+            if(turrets.Count > 0)
+            {
+                int turretTarget = UnityEngine.Random.Range(0, turrets.Count);
+                target = turrets[turretTarget];
+            }
+        }
     }
 }
