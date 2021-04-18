@@ -10,6 +10,7 @@ public class sceneManiger : MonoBehaviour
     [SerializeField]
     private GameObject MainCammra;
     [SerializeField]
+    private bool NextLevle;
     //private audioManiger aManiger;
     // Start is called before the first frame update
     void Start()
