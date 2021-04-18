@@ -102,7 +102,8 @@ MonoBehaviour:
   distence: 0.65
   tagsToHit:
   - wall
-  dammage: 0
+  - enemy
+  dammage: 1
 --- !u!61 &1434863188640291885
 BoxCollider2D:
   m_ObjectHideFlags: 0

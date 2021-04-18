@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class AIbrain : MonoBehaviour
@@ -12,10 +13,9 @@ public class AIbrain : MonoBehaviour
     private void Start()
     {
     }
-
     private void Update()
     {
-        move();
+       move();
     }
     public void move()
     {

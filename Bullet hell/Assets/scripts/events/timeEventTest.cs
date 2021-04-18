@@ -12,5 +12,6 @@ public class timeEventTest : MonoBehaviour
     }
     void printTest(int time)
     {
+        Debug.Log(time);
     }
 }

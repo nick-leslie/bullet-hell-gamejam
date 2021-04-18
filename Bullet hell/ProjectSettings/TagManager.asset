@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - wall
+  - game maniger
+  - enemy
+  - timeManiger
   layers:
   - Default
   - TransparentFX
