@@ -473,7 +473,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 2
+  Invincibal: 0
   health: 0
+  DeathUI: {fileID: 0}
+  dropList:
+  - {fileID: 4400875334628328244, guid: 933f21b47fd8d9d439f836b44fb720f8, type: 3}
+  DropChance: 50
 --- !u!114 &1893643918736412749
 MonoBehaviour:
   m_ObjectHideFlags: 0

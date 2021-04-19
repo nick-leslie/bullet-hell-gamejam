@@ -17,7 +17,10 @@ public class AIbrain : MonoBehaviour
     }
     private void Update()
     {
-       move();
+        if (target != null)
+        {
+            move();
+        }
     }
     public void move()
     {

@@ -10,6 +10,7 @@ TagManager:
   - timeManiger
   - room
   - turret
+  - PlayerUI
   layers:
   - Default
   - TransparentFX
