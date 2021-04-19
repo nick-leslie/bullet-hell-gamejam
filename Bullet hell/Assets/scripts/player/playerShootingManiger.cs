@@ -13,7 +13,9 @@ public class playerShootingManiger : MonoBehaviour
     public bool shootingHeld;
     [SerializeField]
     private GameObject currentGun;
-
+    public bool canShoot=true;
+    public bool canMelee = false;
+    public Vector2 range;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +28,11 @@ public class playerShootingManiger : MonoBehaviour
         playerDirection();
         if(shootingHeld)
         {
-            currentGun.GetComponent<gun>().shoot();
-            cursor.GetComponent<animationControler>().StartAnimation("shoot");
+            if (canShoot)
+            {
+                currentGun.GetComponent<gun>().shoot();
+                cursor.GetComponent<animationControler>().StartAnimation("shoot");
+            }
         }
     }
     public void shoot(InputAction.CallbackContext context)
@@ -38,6 +43,37 @@ public class playerShootingManiger : MonoBehaviour
         } else
         {
             shootingHeld = false;
+        }
+    }
+    public void Melee(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            Melee meleeSystem = currentGun.GetComponent<Melee>();
+            if (meleeSystem != null)
+            {
+                if (canMelee)
+                {
+                    meleeSystem.melee();
+                }
+            }
+        }
+    }
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            Collider2D[] entitys = Physics2D.OverlapBoxAll(currentGun.transform.position, range, 0);
+            for (int i = 0; i < entitys.Length; i++)
+            {
+                if (entitys[i].CompareTag("pickup"))
+                {
+                    if (entitys[i].gameObject.GetComponent<Resoruce>() != null)
+                    {
+                        entitys[i].gameObject.GetComponent<Resoruce>().Pickup(gameObject);
+                    }
+                }
+            }
         }
     }
     void ChangeGunRotation()

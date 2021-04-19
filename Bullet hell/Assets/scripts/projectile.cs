@@ -33,10 +33,7 @@ public class projectile : MonoBehaviour
                     healthManiger hm = hitinfo.collider.gameObject.GetComponent<healthManiger>();
                     if (hm != null)
                     {
-                        if (!hitinfo.collider.CompareTag("Player"))
-                        {
-                            hm.DealDamage(dammage);
-                        }
+                        hm.DealDamage(dammage);
                     }
                     die();
                 }
@@ -47,20 +44,5 @@ public class projectile : MonoBehaviour
     void die()
     {
         Destroy(gameObject);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        for (int i = 0; i < tagsToHit.Length; i++)
-        {
-            if (collision.gameObject.CompareTag(tagsToHit[i]))
-            {
-                healthManiger hm = collision.gameObject.GetComponent<healthManiger>();
-                if (hm != null)
-                {
-                    hm.DealDamage(dammage);
-                }
-                die();
-            }
-        }
     }
 }

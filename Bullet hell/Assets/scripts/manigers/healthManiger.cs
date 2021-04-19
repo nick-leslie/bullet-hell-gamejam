@@ -53,9 +53,14 @@ public class healthManiger : MonoBehaviour
     {
         if (Invincibal == false)
         {
+            if (gameObject.GetComponent<animationControler>() != null)
+            {
+                gameObject.GetComponent<animationControler>().StartAnimation("hurt");
+            }
             if (health - dammage >= 0)
             {
                 health -= dammage;
+                
             }
             if (health <= 0)
             {
