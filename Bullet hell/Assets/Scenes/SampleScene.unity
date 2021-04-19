@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 91871304}
   - component: {fileID: 91871306}
   - component: {fileID: 91871305}
+  - component: {fileID: 91871307}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -427,6 +428,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &91871307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91871303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9222bf7169aef674b85a852fd5c3ec8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onCoolDown: 0
+  range: {x: 2.99, y: 2.83}
+  dammage: 1
+  InteractPoint: {fileID: 237039354}
+  thingsToHit:
+  - enemy
 --- !u!114 &95221766 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5706290673905232303, guid: 1654717c9acb13640ae78c248e4190c2, type: 3}
@@ -825,7 +844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237039353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.535, y: -0.074, z: 0}
+  m_LocalPosition: {x: 0.63, y: 0.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 91871304}
@@ -1231,6 +1250,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 372124209}
+        m_TargetAssemblyTypeName: playerShootingManiger, Assembly-CSharp
+        m_MethodName: Melee
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 9ad56c73-ab3d-409f-ad49-c736ae25ee11
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -1321,6 +1352,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: bb098bfa-179e-4f7a-b7bf-3c615b1abc8c
     m_ActionName: Player/place[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 372124209}
+        m_TargetAssemblyTypeName: playerShootingManiger, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0bad2ece-6bae-457c-bccf-18652b83861c
+    m_ActionName: Player/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1453,6 +1500,9 @@ MonoBehaviour:
   cursor: {fileID: 911302843}
   shootingHeld: 0
   currentGun: {fileID: 91871303}
+  canShoot: 0
+  canMelee: 1
+  range: {x: 3, y: 3}
 --- !u!114 &372124210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18155,7 +18205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499244999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45, y: -0.07, z: 0}
+  m_LocalPosition: {x: 0.463, y: 0.102, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 372124207}
@@ -18220,7 +18270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms: []
-  SpawnChance: 0
+  SpawnChance: 67
   easyEnemys:
   - {fileID: 1893643918736412743, guid: d99cb8fe106694b40a2e44da63b55f07, type: 3}
   MidEnemys: []

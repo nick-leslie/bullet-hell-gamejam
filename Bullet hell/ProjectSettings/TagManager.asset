@@ -11,6 +11,7 @@ TagManager:
   - room
   - turret
   - PlayerUI
+  - pickup
   layers:
   - Default
   - TransparentFX

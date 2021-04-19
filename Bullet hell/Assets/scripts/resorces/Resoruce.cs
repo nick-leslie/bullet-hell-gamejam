@@ -8,12 +8,10 @@ public class Resoruce : MonoBehaviour
     private string type;
     [SerializeField]
     private int amount;
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    public void Pickup(GameObject caller)
     {
-        if(collision.CompareTag("Player"))
-        {
-            collision.GetComponent<Invantory>().addToRecorseCount(type, amount);
-            Destroy(gameObject);
-        }
+       caller.GetComponent<Invantory>().addToRecorseCount(type, amount);
+       Destroy(gameObject);
     }
 }
