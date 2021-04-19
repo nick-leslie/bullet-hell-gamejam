@@ -33,7 +33,10 @@ public class projectile : MonoBehaviour
                     healthManiger hm = hitinfo.collider.gameObject.GetComponent<healthManiger>();
                     if (hm != null)
                     {
-                        hm.DealDamage(dammage);
+                        if (!hitinfo.collider.CompareTag("Player"))
+                        {
+                            hm.DealDamage(dammage);
+                        }
                     }
                     die();
                 }

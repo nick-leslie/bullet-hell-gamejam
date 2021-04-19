@@ -49,7 +49,7 @@ public class shooterAI : MonoBehaviour
         if (brain.target != null)
         {
             trackTarget();
-            checkForCloseColiders();
+            //checkForCloseColiders();
             enemyDirection();
         }
     }

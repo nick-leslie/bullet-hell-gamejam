@@ -57,6 +57,9 @@ public class AIbrain : MonoBehaviour
             {
                 int turretTarget = UnityEngine.Random.Range(0, turrets.Count);
                 target = turrets[turretTarget];
+            } else
+            {
+                target = null;
             }
         }
     }
