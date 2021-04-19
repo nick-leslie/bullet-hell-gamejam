@@ -22,12 +22,6 @@ public class shooterAI : MonoBehaviour
     private bool facingRight;
     [SerializeField]
     private bool GunTrackTargert;
-
-
-    // TODO MAKE I SO THAT IT LOOKS AT TARGET NOT JUST PLAYER
-
-
-
     // Start is called before the first frame update
     void Start()
     {

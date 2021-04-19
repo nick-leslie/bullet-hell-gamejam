@@ -1,79 +1,79 @@
 fileFormatVersion: 2
-guid: 7ebc5c383fee6474b944e21ee2e11d54
+guid: 1ef4eec5358467b4e85c87bab341d8a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2272767932341764973
-    second: PCcosmo-sheet_0
+      213: -5186956925086335942
+    second: PCcosmo-sheetfixed_0
   - first:
-      213: -3288756919479389229
-    second: PCcosmo-sheet_1
+      213: 5793434884697823414
+    second: PCcosmo-sheetfixed_1
   - first:
-      213: 6679269197553819606
-    second: PCcosmo-sheet_2
+      213: 966783219428501175
+    second: PCcosmo-sheetfixed_2
   - first:
-      213: 1866670637221159326
-    second: PCcosmo-sheet_3
+      213: -4693126018861529124
+    second: PCcosmo-sheetfixed_3
   - first:
-      213: -3990979351699191260
-    second: PCcosmo-sheet_4
+      213: -1771124494106977376
+    second: PCcosmo-sheetfixed_4
   - first:
-      213: 6030253363363358554
-    second: PCcosmo-sheet_5
+      213: 5461004469282324934
+    second: PCcosmo-sheetfixed_5
   - first:
-      213: -4521712177878112836
-    second: PCcosmo-sheet_6
+      213: -489653427055957143
+    second: PCcosmo-sheetfixed_6
   - first:
-      213: -2679988876980047217
-    second: PCcosmo-sheet_7
+      213: -3907585108707456328
+    second: PCcosmo-sheetfixed_7
   - first:
-      213: -9168917818103628421
-    second: PCcosmo-sheet_8
+      213: 7898592062828556787
+    second: PCcosmo-sheetfixed_8
   - first:
-      213: -2131641810531659514
-    second: PCcosmo-sheet_9
+      213: -5218043414443604060
+    second: PCcosmo-sheetfixed_9
   - first:
-      213: -644153375150783214
-    second: PCcosmo-sheet_10
+      213: -583373461200718609
+    second: PCcosmo-sheetfixed_10
   - first:
-      213: -8589532217081816461
-    second: PCcosmo-sheet_11
+      213: -3984493046804709106
+    second: PCcosmo-sheetfixed_11
   - first:
-      213: -8534671123026476306
-    second: PCcosmo-sheet_12
+      213: 6438517734187261756
+    second: PCcosmo-sheetfixed_12
   - first:
-      213: 6508850709230873329
-    second: PCcosmo-sheet_13
+      213: 6822499835323312260
+    second: PCcosmo-sheetfixed_13
   - first:
-      213: 2505222204181159951
-    second: PCcosmo-sheet_14
+      213: -4666083395422186015
+    second: PCcosmo-sheetfixed_14
   - first:
-      213: 3759074727271607008
-    second: PCcosmo-sheet_15
+      213: 8562368557711569132
+    second: PCcosmo-sheetfixed_15
   - first:
-      213: 3020438869446063999
-    second: PCcosmo-sheet_16
+      213: 5840614174742635835
+    second: PCcosmo-sheetfixed_16
   - first:
-      213: 8244374755887017502
-    second: PCcosmo-sheet_17
+      213: -883291921673927362
+    second: PCcosmo-sheetfixed_17
   - first:
-      213: -1514733487656277778
-    second: PCcosmo-sheet_18
+      213: 954351390213290160
+    second: PCcosmo-sheetfixed_18
   - first:
-      213: -6513593169834137342
-    second: PCcosmo-sheet_19
+      213: -2768684553712429131
+    second: PCcosmo-sheetfixed_19
   - first:
-      213: 605745732257367226
-    second: PCcosmo-sheet_20
+      213: -6783980016719483302
+    second: PCcosmo-sheetfixed_20
   - first:
-      213: 3738805124924009876
-    second: PCcosmo-sheet_21
+      213: -6234690881505617527
+    second: PCcosmo-sheetfixed_21
   - first:
-      213: -4000905524622535116
-    second: PCcosmo-sheet_22
+      213: -5979798720521690180
+    second: PCcosmo-sheetfixed_22
   - first:
-      213: 7312543122841107502
-    second: PCcosmo-sheet_23
+      213: 1140910683817166099
+    second: PCcosmo-sheetfixed_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -187,7 +187,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PCcosmo-sheet_0
+      name: PCcosmo-sheetfixed_0
       rect:
         serializedVersion: 2
         x: 0
@@ -201,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d634120946e7a8f10800000000000000
-      internalID: 2272767932341764973
+      spriteID: a3cf9f6882a3408b0800000000000000
+      internalID: -5186956925086335942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_1
+      name: PCcosmo-sheetfixed_1
       rect:
         serializedVersion: 2
         x: 64
@@ -222,14 +222,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d3b2dd910dfb52d0800000000000000
-      internalID: -3288756919479389229
+      spriteID: 6b815cb255a666050800000000000000
+      internalID: 5793434884697823414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_2
+      name: PCcosmo-sheetfixed_2
       rect:
         serializedVersion: 2
         x: 128
@@ -243,14 +243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6df576762f781bc50800000000000000
-      internalID: 6679269197553819606
+      spriteID: 7b628d04734ba6d00800000000000000
+      internalID: 966783219428501175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_3
+      name: PCcosmo-sheetfixed_3
       rect:
         serializedVersion: 2
         x: 192
@@ -264,14 +264,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e912834fd0fb7e910800000000000000
-      internalID: 1866670637221159326
+      spriteID: cd78d9740caaedeb0800000000000000
+      internalID: -4693126018861529124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_4
+      name: PCcosmo-sheetfixed_4
       rect:
         serializedVersion: 2
         x: 256
@@ -285,14 +285,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42a0d0cbc613d98c0800000000000000
-      internalID: -3990979351699191260
+      spriteID: 0ab92cb08a3bb67e0800000000000000
+      internalID: -1771124494106977376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_5
+      name: PCcosmo-sheetfixed_5
       rect:
         serializedVersion: 2
         x: 320
@@ -306,14 +306,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a57a0ecfb73cfa350800000000000000
-      internalID: 6030253363363358554
+      spriteID: 6c1c46491a269cb40800000000000000
+      internalID: 5461004469282324934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_6
+      name: PCcosmo-sheetfixed_6
       rect:
         serializedVersion: 2
         x: 384
@@ -327,14 +327,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb564053bb6af31c0800000000000000
-      internalID: -4521712177878112836
+      spriteID: 96be6496dc66439f0800000000000000
+      internalID: -489653427055957143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_7
+      name: PCcosmo-sheetfixed_7
       rect:
         serializedVersion: 2
         x: 448
@@ -348,14 +348,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f823b99c054cecad0800000000000000
-      internalID: -2679988876980047217
+      spriteID: 8bac2e10c0875c9c0800000000000000
+      internalID: -3907585108707456328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_8
+      name: PCcosmo-sheetfixed_8
       rect:
         serializedVersion: 2
         x: 512
@@ -369,14 +369,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7dfe2dc2d571c080800000000000000
-      internalID: -9168917818103628421
+      spriteID: 3f1bd92f1af6d9d60800000000000000
+      internalID: 7898592062828556787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_9
+      name: PCcosmo-sheetfixed_9
       rect:
         serializedVersion: 2
         x: 576
@@ -390,14 +390,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 601d3e63113ea62e0800000000000000
-      internalID: -2131641810531659514
+      spriteID: 4a7c5833929c597b0800000000000000
+      internalID: -5218043414443604060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_10
+      name: PCcosmo-sheetfixed_10
       rect:
         serializedVersion: 2
         x: 640
@@ -411,14 +411,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 215c44d0be18f07f0800000000000000
-      internalID: -644153375150783214
+      spriteID: fe4bdb98de077e7f0800000000000000
+      internalID: -583373461200718609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_11
+      name: PCcosmo-sheetfixed_11
       rect:
         serializedVersion: 2
         x: 704
@@ -432,14 +432,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37a901635f9dbc880800000000000000
-      internalID: -8589532217081816461
+      spriteID: e0101374fac34b8c0800000000000000
+      internalID: -3984493046804709106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_12
+      name: PCcosmo-sheetfixed_12
       rect:
         serializedVersion: 2
         x: 768
@@ -453,14 +453,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee2093d05d1ce8980800000000000000
-      internalID: -8534671123026476306
+      spriteID: c3fd84a34c53a5950800000000000000
+      internalID: 6438517734187261756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_13
+      name: PCcosmo-sheetfixed_13
       rect:
         serializedVersion: 2
         x: 832
@@ -474,14 +474,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fa61c31c35145a50800000000000000
-      internalID: 6508850709230873329
+      spriteID: 4886b9cf3736eae50800000000000000
+      internalID: 6822499835323312260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_14
+      name: PCcosmo-sheetfixed_14
       rect:
         serializedVersion: 2
         x: 896
@@ -495,14 +495,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f00a3ab425654c220800000000000000
-      internalID: 2505222204181159951
+      spriteID: 1e51383bfddbe3fb0800000000000000
+      internalID: -4666083395422186015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_15
+      name: PCcosmo-sheetfixed_15
       rect:
         serializedVersion: 2
         x: 960
@@ -516,14 +516,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ea2c2b4c8aea2430800000000000000
-      internalID: 3759074727271607008
+      spriteID: ce03f5e76d4a3d670800000000000000
+      internalID: 8562368557711569132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_16
+      name: PCcosmo-sheetfixed_16
       rect:
         serializedVersion: 2
         x: 1024
@@ -537,14 +537,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f777d171621cae920800000000000000
-      internalID: 3020438869446063999
+      spriteID: b3565a3a5a70e0150800000000000000
+      internalID: 5840614174742635835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_17
+      name: PCcosmo-sheetfixed_17
       rect:
         serializedVersion: 2
         x: 1088
@@ -558,14 +558,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1ee7dfe827e96270800000000000000
-      internalID: 8244374755887017502
+      spriteID: e3547a75daaedb3f0800000000000000
+      internalID: -883291921673927362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_18
+      name: PCcosmo-sheetfixed_18
       rect:
         serializedVersion: 2
         x: 1152
@@ -579,14 +579,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee8ebda1be59afae0800000000000000
-      internalID: -1514733487656277778
+      spriteID: 0b8309478898e3d00800000000000000
+      internalID: 954351390213290160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_19
+      name: PCcosmo-sheetfixed_19
       rect:
         serializedVersion: 2
         x: 1216
@@ -600,14 +600,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20920a4c5811b95a0800000000000000
-      internalID: -6513593169834137342
+      spriteID: 5b71cd84118a399d0800000000000000
+      internalID: -2768684553712429131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_20
+      name: PCcosmo-sheetfixed_20
       rect:
         serializedVersion: 2
         x: 1280
@@ -621,14 +621,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4c86bb88a086800800000000000000
-      internalID: 605745732257367226
+      spriteID: a5e261c2e167ad1a0800000000000000
+      internalID: -6783980016719483302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_21
+      name: PCcosmo-sheetfixed_21
       rect:
         serializedVersion: 2
         x: 1344
@@ -642,14 +642,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49d618bb377e2e330800000000000000
-      internalID: 3738805124924009876
+      spriteID: 9899d731dade979a0800000000000000
+      internalID: -6234690881505617527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_22
+      name: PCcosmo-sheetfixed_22
       rect:
         serializedVersion: 2
         x: 1408
@@ -663,14 +663,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 436d9f08f9de978c0800000000000000
-      internalID: -4000905524622535116
+      spriteID: cb328fafebc730da0800000000000000
+      internalID: -5979798720521690180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PCcosmo-sheet_23
+      name: PCcosmo-sheetfixed_23
       rect:
         serializedVersion: 2
         x: 1472
@@ -684,8 +684,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2c7ba90a3f5b7560800000000000000
-      internalID: 7312543122841107502
+      spriteID: 315ce5dd83455df00800000000000000
+      internalID: 1140910683817166099
       vertices: []
       indices: 
       edges: []
