@@ -19,10 +19,12 @@ public class movement : MonoBehaviour
     Vector2 targetPos;
     [SerializeField]
     private float closeEnough;
+    private healthManiger hm;
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        hm = gameObject.GetComponent<healthManiger>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class movement : MonoBehaviour
             Debug.DrawLine(transform.position, targetPos);
             if (Vector2.Distance(transform.position,targetPos) <= closeEnough)
             {
+                hm.Invincibal = false;
                 dashing = false;
             }
         }
@@ -76,6 +79,7 @@ public class movement : MonoBehaviour
             {
                 //transform.Translate(moveDire * Time.deltaTime * dashDistence);
                 dashing = true;
+                hm.Invincibal = true;
                 //rb.velocity = Vector2.zero;
                 //rb.velocity = moveDire * dashDistence;
                 targetPos = new Vector2(transform.position.x + dashDistence * moveDire.x, transform.position.y + dashDistence * moveDire.y);

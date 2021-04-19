@@ -17,6 +17,8 @@ public class enemySpawnManiger : MonoBehaviour
     [SerializeField]
     private GameObject[] HardEnemys;
     public int CurrentDificulty;
+    [SerializeField]
+    public float offset;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +33,6 @@ public class enemySpawnManiger : MonoBehaviour
             for (int i = 0; i < rooms.Count; i++) {
                 Room CurrentRoom = rooms[i].GetComponent<Room>();
                 int enemyAmount = CurrentRoom.ThingsInRoom.FindAll((GameObject obj) => obj.tag == "enemy").Count;
-                Debug.Log(enemyAmount);
                 if (enemyAmount < CurrentRoom.MaxAmountOfEnemysForRoom)
                 {
                     int chance = Mathf.RoundToInt(Random.Range(1, 100));
@@ -69,8 +70,8 @@ public class enemySpawnManiger : MonoBehaviour
     private Vector2 RandomInRoom(GameObject room)
     {
         return new Vector2(
-            Random.Range(room.GetComponent<Collider2D>().bounds.min.x, room.GetComponent<Collider2D>().bounds.max.x),
-            Random.Range(room.GetComponent<Collider2D>().bounds.min.y, room.GetComponent<Collider2D>().bounds.max.y)
+            Random.Range(room.GetComponent<Collider2D>().bounds.min.x + offset, room.GetComponent<Collider2D>().bounds.max.x-offset),
+            Random.Range(room.GetComponent<Collider2D>().bounds.min.y + offset, room.GetComponent<Collider2D>().bounds.max.y-offset)
         );
     }
     void enemyFactory(GameObject enemyPrefab,GameObject room)

@@ -8,6 +8,10 @@ public class Room : MonoBehaviour
     public int MaxAmountOfEnemysForRoom;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Player"))
+        {
+            Camera.main.GetComponent<CameraControler>().MoveCamera(gameObject.transform);
+        }
         ThingsInRoom.Add(collision.gameObject);
         if (collision.gameObject.CompareTag("Player"))
         {
