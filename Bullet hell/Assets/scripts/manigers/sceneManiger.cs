@@ -9,6 +9,7 @@ public class sceneManiger : MonoBehaviour
     void Start()
     {
         //aManiger = GameObject.FindGameObjectWithTag("audioManiger").GetComponent<audioManiger>();
+        Application.targetFrameRate = 100;
     }
     public void StartGame()
     {
