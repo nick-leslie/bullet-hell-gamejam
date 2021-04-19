@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class AIbrain : MonoBehaviour
 {
     [SerializeField]
     private float Speed;
-    [SerializeField]
-    private GameObject target;
-
+    public GameObject target;
     private Vector3 targetPos;
-    private Rigidbody2D rb;
     public bool atTarget;
+    public GameObject home;
     private void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        
     }
-
     private void Update()
     {
-        move();
+       move();
     }
     public void move()
     {
@@ -44,5 +42,22 @@ public class AIbrain : MonoBehaviour
     public void TargetTransform(Transform newTarget)
     {
         targetPos = newTarget.position;
+    }
+    public void FindTarget()
+    {
+        Room HomeInfo = home.GetComponent<Room>();
+        GameObject potentalPlayer = HomeInfo.ThingsInRoom.Find((GameObject obj) => obj.tag == "Player");
+        if (potentalPlayer != null)
+        {
+            target = potentalPlayer;
+        } else
+        {
+            List<GameObject> turrets = HomeInfo.ThingsInRoom.FindAll((GameObject obj) => obj.tag == "turret");
+            if(turrets.Count > 0)
+            {
+                int turretTarget = UnityEngine.Random.Range(0, turrets.Count);
+                target = turrets[turretTarget];
+            }
+        }
     }
 }

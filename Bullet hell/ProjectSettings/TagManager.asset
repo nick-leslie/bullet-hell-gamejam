@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - wall
+  - game maniger
+  - enemy
+  - timeManiger
+  - room
+  - turret
   layers:
   - Default
   - TransparentFX

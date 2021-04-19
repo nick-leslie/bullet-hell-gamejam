@@ -18,7 +18,7 @@ public class TimeEvent : MonoBehaviour {
         int timeFrom10=10;
         while (true)
         {
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSeconds(1);
             onSecondpassed?.Invoke(timeFrom10); // this calls the event if there are subscribers to it
             timeFrom10--;
             if (timeFrom10 < 0)

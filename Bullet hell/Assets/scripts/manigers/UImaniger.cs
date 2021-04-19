@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 public class UImaniger : MonoBehaviour
 {
     private GameObject HealthCanvus;
@@ -17,15 +18,43 @@ public class UImaniger : MonoBehaviour
     [SerializeField]
     private float TimeBetweenSpriteChage;
     private GameObject player;
+    [Header("Shop UI stuff")]
+    [SerializeField]
+    private GameObject shopUI;
+    private bool shopActive = false;
+    PauseManiger pm;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        hearts = new GameObject[player.GetComponent<healthManiger>().getMaxHeath];
-        HealthCanvus = GameObject.FindGameObjectWithTag("PlayerUI");
-        for (int i = 0; i < hearts.Length; i++)
+        pm = GameObject.FindGameObjectWithTag("game maniger").GetComponent<PauseManiger>();
+       // hearts = new GameObject[player.GetComponent<healthManiger>().getMaxHeath];
+       // HealthCanvus = GameObject.FindGameObjectWithTag("PlayerUI");
+       // for (int i = 0; i < hearts.Length; i++)
+        //{
+            //hearts[i] = Instantiate(HealthPrefb, (startPos.position + (offset * (i))) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
+            //hearts[i].GetComponent<RectTransform>().SetParent(HealthCanvus.transform);
+        //}
+    }
+    public void OpenShop(InputAction.CallbackContext context)
+    {
+        if(context.phase == InputActionPhase.Performed)
         {
-            hearts[i] = Instantiate(HealthPrefb, (startPos.position + (offset * (i))) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
-            hearts[i].GetComponent<RectTransform>().SetParent(HealthCanvus.transform);
+            changeShopState();
+        }
+    }
+    public void changeShopState()
+    {
+        if (shopActive == false)
+        {
+            shopUI.SetActive(true);
+            shopActive = true;
+            pm.PauseWithoutUI();
+        }
+        else
+        {
+            shopUI.SetActive(false);
+            shopActive = false;
+            pm.unPause();
         }
     }
     IEnumerator HealthAniamtion(float timeDelay, int index, int dire)
