@@ -8,6 +8,8 @@ public class healthManiger : MonoBehaviour
     [SerializeField]
     private int MaxHealth;
     public bool Invincibal = false;
+
+
     public int getMaxHeath 
     { 
         get { return MaxHealth; }    
@@ -28,8 +30,15 @@ public class healthManiger : MonoBehaviour
             }
         }
     }
-    public GameObject DeathUI;
-    public PauseManiger PM;
+    [SerializeField]
+    private GameObject DeathUI;
+    private PauseManiger PM;
+    [Header("enemy garbage")]
+    [SerializeField]
+    private GameObject[] dropList;
+    [SerializeField]
+    [Range(0, 100)]
+    private int DropChance;
     private void Start()
     {
         health = MaxHealth;
@@ -81,7 +90,21 @@ public class healthManiger : MonoBehaviour
             }
         } else
         {
+            RandomDrop();
             Destroy(gameObject);
+        }
+    }
+    void RandomDrop()
+    {
+        if (dropList.Length > 0)
+        {
+            //random drop code
+            int chanse = Mathf.RoundToInt(Random.Range(0, 100));
+            if (chanse > DropChance)
+            {
+                int randomDrop = Mathf.RoundToInt(Random.Range(0, dropList.Length));
+                Instantiate(dropList[randomDrop], gameObject.transform.position, gameObject.transform.rotation);
+            }
         }
     }
 }
