@@ -52,12 +52,13 @@ public class playerShootingManiger : MonoBehaviour
         currentGun.transform.rotation = finalRot;
 
 
-        if(!facingRight)
+        if (!facingRight)
         {
-            currentGun.transform.GetChild(0).localRotation = new Quaternion(0, 180, 0,0);
-        } else
+            currentGun.transform.GetChild(0).localRotation = new Quaternion(0, 180, 0, 0);
+        }
+        else
         {
-            currentGun.transform.GetChild(0).localRotation = new Quaternion(0, 0, 0,0);
+            currentGun.transform.GetChild(0).localRotation = new Quaternion(0, 0, 0, 0);
         }
 
     }

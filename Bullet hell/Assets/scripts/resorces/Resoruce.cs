@@ -10,7 +10,6 @@ public class Resoruce : MonoBehaviour
     private int amount;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("geting called");
         if(collision.CompareTag("Player"))
         {
             collision.GetComponent<Invantory>().addToRecorseCount(type, amount);

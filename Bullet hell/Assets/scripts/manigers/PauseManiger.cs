@@ -41,4 +41,9 @@ public class PauseManiger : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+    public void PauseWithoutUI()
+    {
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
 }

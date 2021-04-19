@@ -48,7 +48,7 @@ public class UImaniger : MonoBehaviour
         {
             shopUI.SetActive(true);
             shopActive = true;
-            pm.Pause();
+            pm.PauseWithoutUI();
         }
         else
         {

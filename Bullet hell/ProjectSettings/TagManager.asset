@@ -8,6 +8,8 @@ TagManager:
   - game maniger
   - enemy
   - timeManiger
+  - room
+  - turret
   layers:
   - Default
   - TransparentFX
