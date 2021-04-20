@@ -11,8 +11,7 @@ public class playerShootingManiger : MonoBehaviour
     private GameObject cursor;
     private bool facingRight;
     public bool shootingHeld;
-    [SerializeField]
-    private GameObject currentGun;
+    public GameObject currentGun;
     public bool canShoot=true;
     public bool canMelee = false;
     public Vector2 range;
