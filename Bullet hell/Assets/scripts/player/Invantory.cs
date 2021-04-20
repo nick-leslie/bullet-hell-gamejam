@@ -9,16 +9,13 @@ public class Invantory : MonoBehaviour
     public string[] recorseType;
 
     public Dictionary<string, int> Recorces = new Dictionary<string, int>();
-    [Header("gun types")]
-    public bool pistol;
-    public bool shotgun;
-    public bool maschineGun;
     private void Start()
     {
         for(int i=0;i<recorseType.Length;i++)
         {
             Recorces[recorseType[i]] = 0;
         }
+        Recorces["Money"] = 69;
     }
     public void addToRecorseCount(string recorse,int amount)
     {

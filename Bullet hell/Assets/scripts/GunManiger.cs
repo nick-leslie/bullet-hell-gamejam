@@ -49,7 +49,7 @@ public class GunManiger : MonoBehaviour
             }
         }
     }
-    void ChangeAquiredState(string name)
+    public void ChangeAquiredState(string name)
     {
         for(int i=0;i<guns.Length;i++)
         {

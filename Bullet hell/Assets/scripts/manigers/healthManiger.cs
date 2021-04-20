@@ -57,6 +57,10 @@ public class healthManiger : MonoBehaviour
             {
                 gameObject.GetComponent<animationControler>().StartAnimation("hurt");
             }
+            if(gameObject.CompareTag("Player"))
+            {
+                gameObject.GetComponent<UImaniger>().DoHealthAnimation(health-1, 1);
+            }
             if (health - dammage >= 0)
             {
                 health -= dammage;
@@ -73,6 +77,10 @@ public class healthManiger : MonoBehaviour
         if (health + amount <= MaxHealth)
         {
             health += amount;
+            if (gameObject.CompareTag("Player"))
+            {
+                gameObject.GetComponent<UImaniger>().DoHealthAnimation(health-1, -1);
+            }
         }
         else
         {
