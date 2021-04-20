@@ -13,10 +13,16 @@ public class Melee : MonoBehaviour
     public Transform InteractPoint;
     [SerializeField]
     private string[] thingsToHit;
+    animationControler aC;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        onCoolDown = false;
+    }
     void Start()
     {
         onCoolDown = false;
+        aC = gameObject.GetComponent<animationControler>();
     }
 
     // Update is called once per frame
@@ -43,11 +49,24 @@ public class Melee : MonoBehaviour
                 }
             }
             //melee animation
-            //onCoolDown = true;
+            if(aC != null)
+            {
+                aC.StartAnimation("melee");
+                if(aC.forgenObject!=null)
+                {
+                    aC.EnableForgenObject();
+                }
+            }
+            onCoolDown = true;
         }
     }
     public void StopCoolDown()
     {
+        Debug.Log("stoped cool down");
+        if (aC != null)
+        {
+            aC.EndAnimation("melee");
+        }
         onCoolDown = false;
     }
     private void OnDrawGizmos()
