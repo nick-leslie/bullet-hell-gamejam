@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class gun : MonoBehaviour
 {
+    [SerializeField]
     private bool canShoot;
     [Header("universial data")]
     [SerializeField]
@@ -21,9 +22,15 @@ public class gun : MonoBehaviour
     private float delayBetweenBurst;
     bool bursting;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        canShoot = true;
+        bursting = false;
+    }
     void Start()
     {
         canShoot = true;
+        bursting = false;
     }
 
     // Update is called once per frame
