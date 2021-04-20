@@ -7,6 +7,7 @@ public class animationControler : MonoBehaviour
 {
     [SerializeField]
     private string AnimationOnInputString;
+    public GameObject forgenObject;
     public void DoTrigger(string trigger)
     {
         gameObject.GetComponent<Animator>().SetTrigger(trigger);
@@ -36,5 +37,13 @@ public class animationControler : MonoBehaviour
         {
             EndAnimation(AnimationOnInputString);
         }
+    }
+    public void EnableForgenObject()
+    {
+        forgenObject.SetActive(true);
+    }
+    public void DisableAfterUse()
+    {
+        gameObject.SetActive(false);
     }
 }
