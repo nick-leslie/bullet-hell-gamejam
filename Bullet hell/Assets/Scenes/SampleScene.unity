@@ -1533,11 +1533,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d123a92b649278f44b13e616da8414b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPrefb: {fileID: 0}
-  startPos: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
-  spriteAnimations: []
-  TimeBetweenSpriteChage: 0
+  HealthPrefb: {fileID: 7606836688594131620, guid: 33b155272ecc8794882513f61b035880, type: 3}
+  startPos: {fileID: 541173169}
+  offset: {x: 70, y: 0, z: 0}
+  spriteAnimations:
+  - {fileID: 6332333895991467990, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 6141573540190303733, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 2427249707551044282, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 8712337533726516257, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -4631949199256131834, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 3099181472966192999, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 9124643424638593430, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -8640821937228722525, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -6021840334380973133, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 2229424593064816098, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -2460397668457858153, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -8769287207642350542, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 9149315918112038297, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -6359543634217850801, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 3508313729048473489, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 8678888029036288923, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -3776139923906753102, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -8450963432672621227, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 5998803739890425075, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 2360126805115737353, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -6669272701979691721, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 2690693182041368799, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -6429376534240163120, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 555867578869842517, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 2419638289545398654, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -1364159997987119221, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 4973696327152345021, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -7325469649395468527, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 4505380623840103428, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 5633197119899505511, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 6918447475814550608, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 4606965588021270841, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -4009865084381739767, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 1267940890369454715, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: -1245363323927033019, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 746948328184776918, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 4262397293445774024, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  - {fileID: 702011034575467049, guid: d5e2b4066c6ef8a4bba41ba161162b63, type: 3}
+  TimeBetweenSpriteChage: 0.02
   shopUI: {fileID: 1190507160}
   THEBIGNUMBER: {fileID: 1997461328}
 --- !u!114 &372124212
@@ -1570,12 +1608,8 @@ MonoBehaviour:
   - Metal
   - Glass
   - Electronics
-  - Wood
-  - Ammo
+  - Oil
   - Money
-  pistol: 0
-  shotgun: 0
-  maschineGun: 0
 --- !u!95 &372124214
 Animator:
   serializedVersion: 3
@@ -22230,6 +22264,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461702698}
   m_CullTransparentMesh: 1
+--- !u!1 &541173168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541173169}
+  m_Layer: 5
+  m_Name: heart location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &541173169
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541173168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2054798835}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 71, y: -67}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &724533074
 GameObject:
   m_ObjectHideFlags: 0
@@ -22564,7 +22633,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190507160}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
@@ -22690,6 +22759,7 @@ GameObject:
   - component: {fileID: 1303323529}
   - component: {fileID: 1303323528}
   - component: {fileID: 1303323527}
+  - component: {fileID: 1303323530}
   m_Layer: 5
   m_Name: turret buttion
   m_TagString: Untagged
@@ -22761,13 +22831,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 372124212}
-        m_TargetAssemblyTypeName: turretPlacement, Assembly-CSharp
-        m_MethodName: addToQ
-        m_Mode: 2
+      - m_Target: {fileID: 1303323530}
+        m_TargetAssemblyTypeName: shopManiger, Assembly-CSharp
+        m_MethodName: Buy
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 4400875334628328244, guid: 933f21b47fd8d9d439f836b44fb720f8, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -22811,6 +22881,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303323525}
   m_CullTransparentMesh: 1
+--- !u!114 &1303323530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303323525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a73b27915541b40a6242c485640dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeItem:
+    price: 69
+    name: randle
+    isGun: 0
+    turret: {fileID: 4400875334628328244, guid: 933f21b47fd8d9d439f836b44fb720f8, type: 3}
 --- !u!1 &1349289605
 GameObject:
   m_ObjectHideFlags: 0
@@ -24361,7 +24448,7 @@ GameObject:
   - component: {fileID: 2054798832}
   m_Layer: 5
   m_Name: PlayerUI
-  m_TagString: Untagged
+  m_TagString: PlayerUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24439,6 +24526,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1997461327}
+  - {fileID: 541173169}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -33,13 +33,14 @@ public class UImaniger : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         pm = GameObject.FindGameObjectWithTag("game maniger").GetComponent<PauseManiger>();
-       // hearts = new GameObject[player.GetComponent<healthManiger>().getMaxHeath];
-       // HealthCanvus = GameObject.FindGameObjectWithTag("PlayerUI");
-       // for (int i = 0; i < hearts.Length; i++)
-        //{
-            //hearts[i] = Instantiate(HealthPrefb, (startPos.position + (offset * (i))) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
-            //hearts[i].GetComponent<RectTransform>().SetParent(HealthCanvus.transform);
-        //}
+        hearts = new GameObject[player.GetComponent<healthManiger>().getMaxHeath];
+        HealthCanvus = GameObject.FindGameObjectWithTag("PlayerUI");
+        Debug.Log(HealthCanvus);
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            hearts[i] = Instantiate(HealthPrefb, (startPos.position + (offset * (i))) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
+            hearts[i].GetComponent<RectTransform>().SetParent(HealthCanvus.transform);
+        }
         timeingEvent = GameObject.FindGameObjectWithTag("timeManiger").GetComponent<TimeEvent>();
         timeingEvent.onSecondpassed += THENUMBER;
     }
@@ -64,6 +65,10 @@ public class UImaniger : MonoBehaviour
             shopActive = false;
             pm.unPause();
         }
+    }
+    public void DoHealthAnimation(int index,int dire)
+    {
+        StartCoroutine(HealthAniamtion(TimeBetweenSpriteChage, index, dire));
     }
     IEnumerator HealthAniamtion(float timeDelay, int index, int dire)
     {
