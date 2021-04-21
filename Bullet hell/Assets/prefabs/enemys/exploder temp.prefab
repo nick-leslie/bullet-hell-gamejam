@@ -124,6 +124,7 @@ MonoBehaviour:
   InteractPoint: {fileID: 6370057588088101086}
   thingsToHit:
   - Player
+  - ship
 --- !u!114 &6370057586990715986
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ TagManager:
   - turret
   - PlayerUI
   - pickup
+  - ship
   layers:
   - Default
   - TransparentFX

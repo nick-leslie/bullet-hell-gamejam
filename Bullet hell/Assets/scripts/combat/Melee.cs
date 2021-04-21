@@ -52,6 +52,11 @@ public class Melee : MonoBehaviour
                                 exploder.Explode();
                             }
                         }
+                        shipManiger ship = entitys[i].gameObject.GetComponent<shipManiger>();
+                        if(ship != null)
+                        {
+                            ship.DealDammage(dammage);
+                        }
                     }
                 }
             }

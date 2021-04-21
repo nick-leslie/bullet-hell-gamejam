@@ -43,6 +43,11 @@ public class projectile : MonoBehaviour
                             exploder.Explode();
                         }
                     }
+                    shipManiger ship = hitinfo.collider.gameObject.GetComponent<shipManiger>();
+                    if (ship != null)
+                    {
+                        ship.DealDammage(dammage);
+                    }
                     die();
                 }
             }

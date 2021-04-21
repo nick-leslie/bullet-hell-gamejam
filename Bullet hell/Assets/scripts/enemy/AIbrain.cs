@@ -51,7 +51,12 @@ public class AIbrain : MonoBehaviour
     {
         Room HomeInfo = home.GetComponent<Room>();
         GameObject potentalPlayer = HomeInfo.ThingsInRoom.Find((GameObject obj) => obj.tag == "Player");
-        if (potentalPlayer != null)
+        GameObject ship = HomeInfo.ThingsInRoom.Find((GameObject obj) => obj.tag == "ship");
+        if(ship != null)
+        {
+            target = ship;
+        }
+        else if (potentalPlayer != null)
         {
             target = potentalPlayer;
         } else
