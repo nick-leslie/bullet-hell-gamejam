@@ -35,6 +35,14 @@ public class projectile : MonoBehaviour
                     {
                         hm.DealDamage(dammage);
                     }
+                    CloseUpEnemy exploder = hitinfo.collider.GetComponent<CloseUpEnemy>();
+                    if (exploder != null)
+                    {
+                        if (exploder.isExploder == true)
+                        {
+                            exploder.Explode();
+                        }
+                    }
                     die();
                 }
             }

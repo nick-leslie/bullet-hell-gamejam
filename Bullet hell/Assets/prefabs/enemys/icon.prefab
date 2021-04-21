@@ -460,6 +460,7 @@ MonoBehaviour:
   target: {fileID: 0}
   atTarget: 0
   home: {fileID: 0}
+  closeDistence: 0.2
 --- !u!114 &1893643918736412750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31ba75efa1026647b00611e30ce38c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShoot: 0
   delay: 1
   projectile: {fileID: 5651938094761189609, guid: 6ac67e4b23eab6342850c7596b27c223, type: 3}
   shotPos:
