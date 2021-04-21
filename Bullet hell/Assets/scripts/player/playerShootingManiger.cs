@@ -71,6 +71,7 @@ public class playerShootingManiger : MonoBehaviour
                     {
                         entitys[i].gameObject.GetComponent<Resoruce>().Pickup(gameObject);
                     }
+                    //TODO MAKE IT SO IT CAN ITERFACE WITH SHIP
                 }
             }
         }
