@@ -5,8 +5,9 @@ using UnityEngine;
 public class Invantory : MonoBehaviour
 {
     [Header("resorces")]
-    [SerializeField]
     public string[] recorseType;
+    [SerializeField]
+    private UImaniger uiMainiger;
 
     public Dictionary<string, int> Recorces = new Dictionary<string, int>();
     private void Start()
@@ -15,7 +16,7 @@ public class Invantory : MonoBehaviour
         {
             Recorces[recorseType[i]] = 0;
         }
-        Recorces["Money"] = 69;
+        uiMainiger = gameObject.GetComponent<UImaniger>();
     }
     public void addToRecorseCount(string recorse,int amount)
     {
@@ -24,6 +25,7 @@ public class Invantory : MonoBehaviour
             if (recorse == recorseType[i])
             {
                 Recorces[recorse] += amount;
+                uiMainiger.updateResorceCount(i);
                 break;
             }
         }

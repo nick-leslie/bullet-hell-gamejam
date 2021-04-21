@@ -11,6 +11,7 @@ public class AIbrain : MonoBehaviour
     private Vector3 targetPos;
     public bool atTarget;
     public GameObject home;
+    public float closeDistence;
     private void Start()
     {
         
@@ -24,7 +25,7 @@ public class AIbrain : MonoBehaviour
     }
     public void move()
     {
-        if(Vector2.Distance(transform.position,targetPos) > 0.2)
+        if(Vector2.Distance(transform.position,targetPos) > closeDistence)
         {
             transform.position = Vector2.MoveTowards(transform.position,targetPos,Speed*Time.deltaTime);
         } else

@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class Melee : MonoBehaviour
 {
-    [SerializeField]
-    private bool onCoolDown;
+    public bool onCoolDown;
     [SerializeField]
     private Vector2 range;
     [SerializeField]
@@ -45,6 +44,14 @@ public class Melee : MonoBehaviour
                         {
                             entitys[i].gameObject.GetComponent<healthManiger>().DealDamage(dammage);
                         }
+                        CloseUpEnemy exploder = entitys[i].GetComponent<CloseUpEnemy>();
+                        if (exploder != null)
+                        {
+                            if (exploder.isExploder == true)
+                            {
+                                exploder.Explode();
+                            }
+                        }
                     }
                 }
             }
@@ -71,6 +78,6 @@ public class Melee : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
-        Gizmos.DrawCube(InteractPoint.position, range);
+        Gizmos.DrawWireCube(InteractPoint.position, range);
     }
 }
