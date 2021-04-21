@@ -28,21 +28,48 @@ public class UImaniger : MonoBehaviour
     TimeEvent timeingEvent;
     [SerializeField]
     private TMP_Text THEBIGNUMBER;
-
+    [Header("Material stuff")]
+    [SerializeField]
+    private Invantory invantory;
+    [SerializeField]
+    private Transform MatiralstartPos;
+    [SerializeField]
+    private GameObject textPrefab;
+    [SerializeField]
+    private GameObject[] Matterials;
+    [SerializeField]
+    private Vector3 MatterialsOfset;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         pm = GameObject.FindGameObjectWithTag("game maniger").GetComponent<PauseManiger>();
         hearts = new GameObject[player.GetComponent<healthManiger>().getMaxHeath];
         HealthCanvus = GameObject.FindGameObjectWithTag("PlayerUI");
-        Debug.Log(HealthCanvus);
         for (int i = 0; i < hearts.Length; i++)
         {
-            hearts[i] = Instantiate(HealthPrefb, (startPos.position + (offset * (i))) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
+            hearts[i] = Instantiate(HealthPrefb, (startPos.position + (offset * i)) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
             hearts[i].GetComponent<RectTransform>().SetParent(HealthCanvus.transform);
         }
         timeingEvent = GameObject.FindGameObjectWithTag("timeManiger").GetComponent<TimeEvent>();
         timeingEvent.onSecondpassed += THENUMBER;
+        invantory = gameObject.GetComponent<Invantory>();
+        Matterials = new GameObject[invantory.recorseType.Length];
+        for (int i=0;i<invantory.recorseType.Length;i++)
+        {
+            Matterials[i] = Instantiate(textPrefab, (MatiralstartPos.position - (MatterialsOfset * i)) / HealthCanvus.GetComponent<Canvas>().scaleFactor, startPos.rotation);
+            Matterials[i].GetComponent<RectTransform>().SetParent(HealthCanvus.transform);
+            StartCoroutine(lateStart(0.5f,i));
+        }
+    }
+    IEnumerator lateStart(float waitTime,int i)
+    {
+        yield return new WaitForSeconds(waitTime);
+        updateResorceCount(i);
+    }
+    public void updateResorceCount(int index)
+    {
+        Debug.Log(invantory.recorseType[index]);
+        Matterials[index].GetComponent<TMP_Text>().text = invantory.recorseType[index] + ":" + invantory.Recorces[invantory.recorseType[index]];
     }
     public void OpenShop(InputAction.CallbackContext context)
     {

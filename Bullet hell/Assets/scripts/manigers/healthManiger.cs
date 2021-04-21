@@ -9,7 +9,6 @@ public class healthManiger : MonoBehaviour
     private int MaxHealth;
     public bool Invincibal = false;
 
-
     public int getMaxHeath 
     { 
         get { return MaxHealth; }    
