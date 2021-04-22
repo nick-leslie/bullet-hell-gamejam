@@ -12,9 +12,10 @@ public class AIbrain : MonoBehaviour
     public bool atTarget;
     public GameObject home;
     public float closeDistence;
+    private animationControler ac;
     private void Start()
     {
-        
+        ac = gameObject.GetComponent<animationControler>();
     }
     private void Update()
     {
@@ -28,8 +29,16 @@ public class AIbrain : MonoBehaviour
         if(Vector2.Distance(transform.position,targetPos) > closeDistence)
         {
             transform.position = Vector2.MoveTowards(transform.position,targetPos,Speed*Time.deltaTime);
+            if (ac != null)
+            {
+                ac.StartAnimation("walk");
+            }
         } else
         {
+            if (ac != null)
+            {
+                ac.EndAnimation("walk");
+            }
             atTarget = true;
         }
     }

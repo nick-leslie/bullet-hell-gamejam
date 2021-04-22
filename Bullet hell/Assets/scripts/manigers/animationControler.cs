@@ -7,7 +7,10 @@ public class animationControler : MonoBehaviour
 {
     [SerializeField]
     private string AnimationOnInputString;
+    [Header("forgen object")]
+    public bool fogenAnimation;
     public GameObject forgenObject;
+    private string forgenAnimationString;
     public void DoTrigger(string trigger)
     {
         gameObject.GetComponent<Animator>().SetTrigger(trigger);
@@ -45,5 +48,19 @@ public class animationControler : MonoBehaviour
     public void DisableAfterUse()
     {
         gameObject.SetActive(false);
+    }
+    public void startForgenAnimation(string forgenInput)
+    {
+        if (forgenObject != null)
+        {
+            forgenObject.GetComponent<Animator>().SetBool(forgenInput, true);
+        }
+    }
+    public void stopForgenAnimation(string forgenInput)
+    {
+        if (forgenObject != null)
+        {
+            forgenObject.GetComponent<Animator>().SetBool(forgenInput, false);
+        }
     }
 }
