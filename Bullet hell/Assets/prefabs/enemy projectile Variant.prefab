@@ -39,11 +39,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 658843847848470049, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: tagsToHit.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 658843847848470049, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: tagsToHit.Array.data[1]
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 658843847848470049, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: tagsToHit.Array.data[2]
+      value: ship
       objectReference: {fileID: 0}
     - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: m_RootOrder
