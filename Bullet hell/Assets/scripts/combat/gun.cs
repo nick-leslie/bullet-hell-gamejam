@@ -21,6 +21,8 @@ public class gun : MonoBehaviour
     [SerializeField]
     private float delayBetweenBurst;
     bool bursting;
+    //-----------------animation and sound shit
+    private animationControler Ac;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -31,6 +33,7 @@ public class gun : MonoBehaviour
     {
         canShoot = true;
         bursting = false;
+        Ac = gameObject.GetComponent<animationControler>();
     }
 
     // Update is called once per frame
@@ -68,6 +71,10 @@ public class gun : MonoBehaviour
                         yield return new WaitForSecondsRealtime(delayBetweenBurst);
                     }
                 }
+                if (Ac != null)
+                {
+                    Ac.StartAnimation("Shoot");
+                }
                 StartCoroutine("coolDown");
             }
         }
@@ -77,5 +84,9 @@ public class gun : MonoBehaviour
         yield return new WaitForSeconds(delay);
         bursting = false;
         canShoot = true;
+        if (Ac != null)
+        {
+            Ac.EndAnimation("Shoot");
+        }
     }
 }
