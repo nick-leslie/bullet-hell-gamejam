@@ -42,4 +42,37 @@ public class turretAim : MonoBehaviour
             }
         }
     }
+    void enemyDirection()
+    {
+        // using mousePosition and player's transform (on orthographic camera view)
+        var delta = brain.target.transform.position - transform.position;
+        if (delta.x >= 0 && !facingRight)
+        {
+            if (GunTrackTargert)
+            {
+                // mouse is on right side of player
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // or activate look right some other way
+                facingRight = true;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                facingRight = true;
+            }
+        }
+        else if (delta.x < 0 && facingRight)
+        {
+            if (GunTrackTargert)
+            {
+                // mouse is on left side
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z); // activate looking left
+                facingRight = false;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                facingRight = false;
+            }
+        }
+    }
 }
