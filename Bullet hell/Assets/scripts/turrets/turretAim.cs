@@ -11,17 +11,24 @@ public class turretAim : MonoBehaviour
     [SerializeField]
     private bool GunTrackTargert;
     private turretBrain brain;
+    private gun turretGun;
     // Start is called before the first frame update
     void Start()
     {
         brain = gameObject.GetComponent<turretBrain>();
+        Debug.Log(brain);
+        turretGun = gameObject.GetComponent<gun>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        trackTarget();
-        //enemyDirection();
+        if(brain.target != null)
+        {
+            trackTarget();
+            enemyDirection();
+            turretGun.shoot();
+        }
     }
     private void trackTarget()
     {
@@ -30,7 +37,7 @@ public class turretAim : MonoBehaviour
             Vector3 dir = brain.target.transform.position - shotPoint.transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            shotPoint.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             if (dir.x >= 0 && !facingRight)
             {
 
