@@ -14,4 +14,15 @@ public class Resoruce : MonoBehaviour
        caller.GetComponent<Invantory>().addToRecorseCount(type, amount);
        Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (type == "Money")
+            {
+                collision.gameObject.GetComponent<Invantory>().addToRecorseCount(type, amount);
+                Destroy(gameObject);
+            }
+        }
+    }
 }
