@@ -5,6 +5,7 @@ using UnityEngine;
 public class turretBrain : MonoBehaviour
 {
     public GameObject target;
+    [SerializeField]
     private Room home;
     // Start is called before the first frame update
     void Start()
@@ -14,16 +15,22 @@ public class turretBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target == null)
+        if (home != null)
         {
-            AsignTarget();
+            if (target == null)
+            {
+                AssignTarget();
+            }
         }
     }
-    public void AsignTarget() 
+    public void AssignTarget() 
     {
         GameObject[] enemys = home.ThingsInRoom.FindAll((GameObject obj) => obj.tag == "enemy").ToArray();
         int enemyTarget = Random.Range(0, enemys.Length);
-        target = enemys[enemyTarget];
+        if (enemys.Length > 0)
+        {
+            target = enemys[enemyTarget];
+        }
     }
     public void AssignHome(GameObject potentalHome)
     {
