@@ -39,23 +39,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 658843847848470049, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: tagsToHit.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 658843847848470049, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: tagsToHit.Array.data[1]
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 658843847848470049, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: tagsToHit.Array.data[2]
+      value: ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 658843847848470049, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: tagsToHit.Array.data[3]
+      value: turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434863188640291885, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434863188640291885, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1828
+      objectReference: {fileID: 0}
+    - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.038533
+      value: -6.9472
       objectReference: {fileID: 0}
     - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7492213
+      value: 0.6578
       objectReference: {fileID: 0}
     - target: {fileID: 2268529873288263808, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93,6 +121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemy projectile Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5935030301924588776, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c44c2c576ee03648809c101186c4df0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7247c8d7fe0884f40b307d71b844fd9b, type: 3}
 --- !u!1 &5651938094761189609 stripped

@@ -68,7 +68,6 @@ public class UImaniger : MonoBehaviour
     }
     public void updateResorceCount(int index)
     {
-        Debug.Log(invantory.recorseType[index]);
         Matterials[index].GetComponent<TMP_Text>().text = invantory.recorseType[index] + ":" + invantory.Recorces[invantory.recorseType[index]];
     }
     public void OpenShop(InputAction.CallbackContext context)
