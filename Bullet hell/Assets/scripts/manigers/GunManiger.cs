@@ -29,22 +29,27 @@ public class GunManiger : MonoBehaviour
     public void SwapGun(InputAction.CallbackContext context)
     {
         int keyPressed = Mathf.RoundToInt(context.ReadValue<float>());
-        if (context.ReadValue<float>() != 0)
+        if (context.phase == InputActionPhase.Performed)
         {
-            if(guns[keyPressed-1].Aquired==true)
+            if (context.ReadValue<float>() != 0)
             {
-                //we do be swaping wepons doh
-                Sm.currentGun.SetActive(false);
-                guns[keyPressed - 1].gunObject.SetActive(true);
-                Sm.currentGun = guns[keyPressed - 1].gunObject;
-                if(guns[keyPressed - 1].isGun)
+                if (guns[keyPressed - 1].Aquired == true)
                 {
-                    Sm.canShoot = true;
-                    Sm.canMelee = false;
-                }  else
-                {
-                    Sm.canShoot = false;
-                    Sm.canMelee = true;
+                    //we do be swaping wepons doh
+                    Sm.currentGun.SetActive(false);
+                    guns[keyPressed - 1].gunObject.SetActive(true);
+                    Debug.Log(guns[keyPressed - 1].GunName);
+                    Sm.currentGun = guns[keyPressed - 1].gunObject;
+                    if (guns[keyPressed - 1].isGun)
+                    {
+                        Sm.canShoot = true;
+                        Sm.canMelee = false;
+                    }
+                    else
+                    {
+                        Sm.canShoot = false;
+                        Sm.canMelee = true;
+                    }
                 }
             }
         }
