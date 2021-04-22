@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 94075274622169014}
   - component: {fileID: 94075274622168973}
   m_Layer: 0
-  m_Name: Gary Boi
+  m_Name: Gary Boi anime
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -4451315226829796597, guid: 193e352fb04922f4baed28dd83900550, type: 3}
+  m_Sprite: {fileID: -4026955412874410915, guid: 5f9d3ae794b545543822b09377ca5ea9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 94075274622169015}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3711aa6bc2163324095309d1d36b393c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 212ae2b5ae9054a4ab00400f7d065a06, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
