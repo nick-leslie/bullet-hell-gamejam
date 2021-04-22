@@ -22,6 +22,7 @@ public class shooterAI : MonoBehaviour
     private bool facingRight;
     [SerializeField]
     private bool GunTrackTargert;
+    private animationControler ac;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class shooterAI : MonoBehaviour
         Home = brain.home;
         StartPathfinding();
         player = GameObject.FindGameObjectWithTag("Player");
+        ac = gameObject.GetComponent<animationControler>();
     }
     // Update is called once per frame
     void Update()
@@ -112,6 +114,10 @@ public class shooterAI : MonoBehaviour
     }
     private void shoot()
     {
+        if(ac != null)
+        {
+            ac.startForgenAnimation("shoot");
+        }
         gameObject.GetComponent<gun>().shoot();
         StartPathfinding();
     }
