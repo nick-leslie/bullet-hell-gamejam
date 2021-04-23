@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationOnInputString: walking
+  fogenAnimation: 0
   forgenObject: {fileID: 0}
 --- !u!114 &6135585415637148861
 MonoBehaviour:
@@ -281,15 +282,15 @@ MonoBehaviour:
     isGun: 0
     gunObject: {fileID: 6135585416938099230}
   - GunName: pistol
-    Aquired: 1
+    Aquired: 0
     isGun: 1
     gunObject: {fileID: 1811315392025468578}
   - GunName: shotgun
-    Aquired: 1
+    Aquired: 0
     isGun: 1
     gunObject: {fileID: 8705605490333816420}
   - GunName: tommy gun
-    Aquired: 1
+    Aquired: 0
     isGun: 1
     gunObject: {fileID: 6523417445946466297}
 --- !u!114 &6135585415637148841
@@ -764,6 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationOnInputString: 
+  fogenAnimation: 0
   forgenObject: {fileID: 6135585417237871744}
 --- !u!114 &6135585416938099224
 MonoBehaviour:
@@ -919,6 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationOnInputString: 
+  fogenAnimation: 0
   forgenObject: {fileID: 0}
 --- !u!1 &6135585417484970838
 GameObject:

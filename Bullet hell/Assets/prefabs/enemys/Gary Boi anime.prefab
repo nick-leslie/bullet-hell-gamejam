@@ -206,12 +206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4b8c1ac2291743bfdd4a47d64c260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0
+  MaxHealth: 3
   Invincibal: 0
   health: 0
   DeathUI: {fileID: 0}
-  dropList: []
-  DropChance: 0
+  dropList:
+  - {fileID: 5401653060493413413, guid: e3268408ec2d51d48a275ce04f34af13, type: 3}
+  - {fileID: 4796590594692121584, guid: 9f7d48427e7f0c5409bdfdcc8aac77ca, type: 3}
+  DropChance: 50
 --- !u!114 &94075274622169014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,8 +246,8 @@ MonoBehaviour:
   projectile: {fileID: 5651938094761189609, guid: 6ac67e4b23eab6342850c7596b27c223, type: 3}
   shotPos:
   - {fileID: 94075274753702394}
-  amount: 1
-  spred: 0
+  amount: 3
+  spred: 10
   delayBetweenBurst: 0
 --- !u!1 &94075274753702395
 GameObject:
@@ -352,7 +354,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -2049480368831004785, guid: 3acb1620f6b98114e9dd74461c277183, type: 3}
+  m_Sprite: {fileID: 7145779782675192660, guid: 6954a8754e89d0341bc5f472713314cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -373,7 +375,7 @@ Animator:
   m_GameObject: {fileID: 94075275388625912}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f0b3cc9e998322842b1cfa609b49d5ae, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1fc7eb40a8b5cca42b7881f5213115b1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

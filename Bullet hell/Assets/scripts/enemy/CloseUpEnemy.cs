@@ -22,6 +22,8 @@ public class CloseUpEnemy : MonoBehaviour
     private bool facingRight;
     [SerializeField]
     private GameObject shotPoint;
+    [SerializeField]
+    private GameObject explotion;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +41,11 @@ public class CloseUpEnemy : MonoBehaviour
         {
             combat();
         }
-        enemyDirection();
-        trackTarget();
+        if (brain.target != null)
+        {
+            enemyDirection();
+            trackTarget();
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -95,6 +100,7 @@ public class CloseUpEnemy : MonoBehaviour
                 hm.DealDamage(dammage);
             }
         }
+        Instantiate(explotion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
     private void trackTarget()

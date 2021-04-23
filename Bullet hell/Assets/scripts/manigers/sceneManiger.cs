@@ -24,6 +24,10 @@ public class sceneManiger : MonoBehaviour
         SceneManager.SetActiveScene(scene);
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+    public void YouWin()
+    {
+        SceneManager.LoadScene(2, LoadSceneMode.Single);
+    }
     public void ReloadLvl()
     {
         //MainCammra.GetComponent<>
