@@ -103,7 +103,10 @@ public class UImaniger : MonoBehaviour
             for (int i = 0; i < spriteAnimations.Length; i++)
             {
                 yield return new WaitForSecondsRealtime(timeDelay);
-                hearts[index].GetComponent<Image>().sprite = spriteAnimations[i];
+                if (index < hearts.Length && index >= 0)
+                {
+                    hearts[index].GetComponent<Image>().sprite = spriteAnimations[i];
+                }
             }
         }
         else

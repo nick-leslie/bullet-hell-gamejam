@@ -8,13 +8,14 @@ public class Invantory : MonoBehaviour
     public string[] recorseType;
     [SerializeField]
     private UImaniger uiMainiger;
-
+    [SerializeField]
+    private int startAmount;
     public Dictionary<string, int> Recorces = new Dictionary<string, int>();
     private void Start()
     {
         for(int i=0;i<recorseType.Length;i++)
         {
-            Recorces[recorseType[i]] = 0;
+            Recorces[recorseType[i]] = startAmount;
         }
         uiMainiger = gameObject.GetComponent<UImaniger>();
     }

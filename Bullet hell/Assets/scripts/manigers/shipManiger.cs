@@ -28,6 +28,8 @@ public class shipManiger : MonoBehaviour
     private int checkpoint;
     [SerializeField]
     private float closeDistence;
+    [SerializeField]
+    private GameObject SceneManiger;
     // Start is called before the first frame update
     private void Start()
     {
@@ -90,7 +92,7 @@ public class shipManiger : MonoBehaviour
         if (zeroCount >= playerInvatory.recorseType.Length-1)
         {
             Debug.Log("we win these");
-            //win condition
+            SceneManiger.GetComponent<sceneManiger>().YouWin();
         }
 
     }

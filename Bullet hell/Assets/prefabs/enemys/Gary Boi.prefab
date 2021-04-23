@@ -206,12 +206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4b8c1ac2291743bfdd4a47d64c260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0
+  MaxHealth: 3
   Invincibal: 0
   health: 0
   DeathUI: {fileID: 0}
-  dropList: []
-  DropChance: 0
+  dropList:
+  - {fileID: 5401653060493413413, guid: e3268408ec2d51d48a275ce04f34af13, type: 3}
+  - {fileID: 4796590594692121584, guid: 9f7d48427e7f0c5409bdfdcc8aac77ca, type: 3}
+  DropChance: 50
 --- !u!114 &94075274622169014
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,6 +22,10 @@ public class Resoruce : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Invantory>().addToRecorseCount(type, amount);
                 Destroy(gameObject);
+            } else if(type == "Health")
+            {
+                collision.gameObject.GetComponent<healthManiger>().Heal(amount);
+                Destroy(gameObject);
             }
         }
     }

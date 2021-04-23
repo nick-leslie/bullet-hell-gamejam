@@ -67,6 +67,10 @@ public class Melee : MonoBehaviour
                 if(aC.forgenObject!=null)
                 {
                     aC.EnableForgenObject();
+                    if (onCoolDown == false)
+                    {
+                        StartCoroutine(manualOveride());
+                    }
                 }
             }
             onCoolDown = true;
@@ -79,6 +83,11 @@ public class Melee : MonoBehaviour
         {
             aC.EndAnimation("melee");
         }
+        onCoolDown = false;
+    }
+    private IEnumerator manualOveride()
+    {
+        yield return new WaitForSeconds(1);
         onCoolDown = false;
     }
     private void OnDrawGizmos()

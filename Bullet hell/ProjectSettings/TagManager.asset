@@ -13,6 +13,7 @@ TagManager:
   - PlayerUI
   - pickup
   - ship
+  - audioManiger
   layers:
   - Default
   - TransparentFX
